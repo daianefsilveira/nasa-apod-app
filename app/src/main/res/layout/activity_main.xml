@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".view.MainActivity">
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_search_by_date"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/dimen_view_padding"
+            />
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btn_search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            android:layout_margin="@dimen/dimen_view_padding"/>
+
+        <ImageView
+            android:id="@+id/iv_apod"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_view_padding"
+            android:layout_height="@dimen/dimen_image_height"
+            app:layout_constraintTop_toBottomOf="@id/btn_search"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/iv_apod"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="@dimen/dimen_view_padding"
+            android:textSize="@dimen/dimen_text_size"
+            android:layout_margin="@dimen/dimen_view_padding"
+            tools:text="test"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="@dimen/dimen_view_padding"
+            android:layout_margin="@dimen/dimen_view_padding"
+            android:textSize="@dimen/dimen_text_size"
+            tools:text="test"/>
+
+        <TextView
+            android:id="@+id/tv_explanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_date"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/dimen_view_padding"
+            android:padding="@dimen/dimen_view_padding"
+            android:textSize="@dimen/dimen_text_size"
+            tools:text="test"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
