@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.DatePicker
 import androidx.annotation.RequiresApi
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.Observer
 import br.com.nasaapodapi.ui.viewmodel.NasaViewModel
 import br.com.nasaapodapi.data.model.NasaModel
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
