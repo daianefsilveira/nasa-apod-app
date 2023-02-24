@@ -13,9 +13,9 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.Observer
 import br.com.nasaapodapi.ui.viewmodel.NasaViewModel
 import br.com.nasaapodapi.data.model.NasaModel
-import br.com.nasaapodapi.data.network.getRetrofitInstance
 import br.com.nasaapodapi.data.repository.NasaRepository
 import br.com.nasaapodapi.databinding.ActivityMainBinding
+import br.com.nasaapodapi.di.getRetrofitInstance
 import com.bumptech.glide.Glide
 
 class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//       nasaViewModel = getViewModel { NasaViewModel(nasaRepository) }
         nasaRepository = NasaRepository(getRetrofitInstance())
         nasaViewModel = NasaViewModel(nasaRepository)
         nasaViewModel.getNasaApodData(getTodayDate())

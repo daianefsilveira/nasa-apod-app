@@ -26,11 +26,4 @@ class NasaViewModel(
             }
         }
     }
-
-    class NasaViewModelFactory (private val nasaRepository: NasaRepository) :
-        ViewModelProvider.Factory {
-        @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel> create(modelClass: Class<T>): T =
-            NasaViewModel(nasaRepository) as T
-    }
 }

@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 
-interface NasaApi {
+interface NasaService {
 
     @GET("planetary/apod")
     suspend fun getNasaApodData(
